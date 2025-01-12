@@ -1,4 +1,4 @@
-"use server";
+
 import { fetchLikes, fetchQuotes } from "@/lib/appwrite/api";
 import {
   mergeQuotesWithLikes,
@@ -8,6 +8,8 @@ import { TopQuotes } from "./TopQuotes";
 import { QuoteCard } from "./QuoteCard";
 import { CombinedQuotes } from "@/types/quote";
 import RetryButton from "./RetryButton";
+
+export const dynamic = "force-dynamic";
 
 export async function QuotesContent() {
   const quoteList = await fetchQuotes();
